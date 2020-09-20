@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1><router-link to="/">Pokedex</router-link></h1>
+  <router-view/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+<style lang="scss">
+@font-face {
+  font-family: pokemon;
+  src: url("./assets/fonts/Pokemon_GB.ttf");
 }
-</script>
 
-<style>
+body {
+  margin: 0;
+  background-color: #cbcbcb;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  color: black;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: pokemon, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 50px 20px;
+  color: black;
 }
 </style>
