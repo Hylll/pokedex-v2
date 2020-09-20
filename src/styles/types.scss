@@ -1,0 +1,11 @@
+@function get_color($color) {
+  @return map_get($colors, $color);
+}
+
+@mixin setup-style($args...) {
+  @each $type, $color in keywords($args) {
+    &--#{$type} {
+      background-color: get_color($color);
+    }
+  }
+}

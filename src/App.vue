@@ -4,6 +4,8 @@
 </template>
 
 <style lang="scss">
+@import './styles/variables';
+
 @font-face {
   font-family: pokemon;
   src: url("./assets/fonts/Pokemon_GB.ttf");

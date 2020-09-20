@@ -35,6 +35,7 @@
         <router-link
           :to="`${pokemon.id}`"
           :title="pokemon.name"
+          :class="`pokelist__pokemon--${pokemon.types[0]}`"
           class="pokelist__pokemon">
           <img
             class="pokelist__pokemon-sprite"
@@ -135,6 +136,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variables';
+@import '../styles/types';
+
 .pokelist {
   display: flex;
   flex-direction: column;
@@ -185,18 +189,13 @@ export default {
     display: flex;
     align-items: center;
     width: 500px;
-    border: 2px solid #2c3e50;
-    border-radius: 4px;
+    border-radius: 20px;
     margin-bottom: 20px;
     text-decoration: none;
     transition: 0.2s;
 
     &:hover {
       margin-left: 25px;
-    }
-
-    &-sprite {
-      border-right: 2px solid #2c3e50;
     }
 
     &-infos {
@@ -223,12 +222,33 @@ export default {
       padding: 0;
 
       &-name {
-        background-color: #696969;
+        background-color: rgba(white, 0.3);
         margin-right: 5px;
         padding: 5px 10px;
         border-radius: 10px;
       }
     }
+
+    @include setup-style(
+      $normal: 'normal',
+      $fire: 'fire',
+      $water: 'water',
+      $electric: 'electric',
+      $grass: 'grass',
+      $ice: 'ice',
+      $fighting: 'fighting',
+      $poison: 'poison',
+      $ground: 'ground',
+      $flying: 'flying',
+      $psychic: 'psychic',
+      $bug: 'bug',
+      $rock: 'rock',
+      $ghost: 'ghost',
+      $dragon: 'dragon',
+      $dark: 'dark',
+      $steel: 'steel',
+      $fairy: 'fairy',
+    )
   }
 }
 </style>

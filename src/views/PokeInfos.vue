@@ -54,6 +54,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variables';
+@import '../styles/types';
+
 .pokeinfos {
   display: flex;
   width: 600px;
@@ -116,5 +119,26 @@ export default {
     top: 10px;
     right: 10px;
   }
+
+  @include setup-style(
+      $normal: 'normal',
+      $fire: 'fire',
+      $water: 'water',
+      $electric: 'electric',
+      $grass: 'grass',
+      $ice: 'ice',
+      $fighting: 'fighting',
+      $poison: 'poison',
+      $ground: 'ground',
+      $flying: 'flying',
+      $psychic: 'psychic',
+      $bug: 'bug',
+      $rock: 'rock',
+      $ghost: 'ghost',
+      $dragon: 'dragon',
+      $dark: 'dark',
+      $steel: 'steel',
+      $fairy: 'fairy',
+    )
 }
 </style>
